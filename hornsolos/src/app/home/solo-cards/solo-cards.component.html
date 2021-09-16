@@ -1,0 +1,12 @@
+<div *ngFor="let solo of hornSolos">
+    <div class="column">
+        <div class="card">
+            <a href="{{solo.pdf}}"><img src ="{{solo.png}}" aria-label="Link to sheet music in PDF"></a>
+            <div class="container">
+                <div class="songTitle">{{solo.songTitle}}</div>
+                <div class="cardText">By {{solo.composer}}<br><a href="{{solo.recording}}">Favorite Recording</a></div>
+                <div class="update"><br>Last updated:</div><div class="timestamp">4:54 PM 9/13/21</div>
+            </div>
+        </div>
+    </div>
+</div>
