@@ -7,7 +7,8 @@ import { TextDescriptionsComponent } from 'src/app/home/solo-cards/text-descript
 @Component({
   selector: 'app-solo-cards',
   templateUrl: './solo-cards.component.html',
-  styleUrls: ['./solo-cards.component.sass']
+  styleUrls: ['./solo-cards.component.sass'],
+  //animations: ['./solo-cards.component.animations.sass']
 })
 export class SoloCardsComponent {
 
@@ -20,7 +21,9 @@ export class SoloCardsComponent {
     divId: 0,
     description: this.descriptions.text[0],
     personalNote: this.descriptions.personal[0],
-    songLength: this.descriptions.length[0]
+    songLength: this.descriptions.length[0],
+    class: "beethoven",
+    flip: false
   },{
     songTitle: "Concerto for Horn and Strings",
     composer: "Gordon Jacob",
@@ -30,7 +33,9 @@ export class SoloCardsComponent {
     divId: 1,
     description: this.descriptions.text[1],
     personalNote: this.descriptions.personal[1],
-    songLength: this.descriptions.length[1]
+    songLength: this.descriptions.length[1],
+    class: "jacob",
+    flip: false
   },{
     songTitle: "Concerto Op. 8",
     composer: "Franz Strauss",
@@ -40,7 +45,9 @@ export class SoloCardsComponent {
     divId: 2,
     description: this.descriptions.text[2],
     personalNote: this.descriptions.personal[2],
-    songLength: this.descriptions.length[2]
+    songLength: this.descriptions.length[2],
+    class: "franz",
+    flip: false
   },{
     songTitle: "Concerto no. 1 in Eb Major",
     composer: "Richard Strauss",
@@ -50,7 +57,9 @@ export class SoloCardsComponent {
     divId: 3,
     description: this.descriptions.text[3],
     personalNote: this.descriptions.personal[3],
-    songLength: this.descriptions.length[3]
+    songLength: this.descriptions.length[3],
+    class: "richard1",
+    flip: false
   },{
     songTitle: "Concerto no. 2 in Eb Major",
     composer: "Richard Strauss",
@@ -60,7 +69,9 @@ export class SoloCardsComponent {
     divId: 4,
     description: this.descriptions.text[4],
     personalNote: this.descriptions.personal[4],
-    songLength: this.descriptions.length[4]
+    songLength: this.descriptions.length[4],
+    class: "richard2",
+    flip: false
   },{
     songTitle: "Sonata for Horn and Piano",
     composer: "Paul Hindemith",
@@ -70,7 +81,9 @@ export class SoloCardsComponent {
     divId: 5,
     description: this.descriptions.text[5],
     personalNote: this.descriptions.personal[5],
-    songLength: this.descriptions.length[5]
+    songLength: this.descriptions.length[5],
+    class: "hindemith",
+    flip: false
   },{
     songTitle: "Concerto no. 1 in D Major",
     composer: "W.A. Mozart",
@@ -80,7 +93,9 @@ export class SoloCardsComponent {
     divId: 6,
     description: this.descriptions.text[6],
     personalNote: this.descriptions.personal[6],
-    songLength: this.descriptions.length[6]
+    songLength: this.descriptions.length[6],
+    class: "mozart1",
+    flip: false
   },{
     songTitle: "Concerto no. 2 in Eb Major",
     composer: "W.A. Mozart",
@@ -90,7 +105,9 @@ export class SoloCardsComponent {
     divId: 7,
     description: this.descriptions.text[7],
     personalNote: this.descriptions.personal[7],
-    songLength: this.descriptions.length[7]
+    songLength: this.descriptions.length[7],
+    class: "mozart2",
+    flip: false
   },{
     songTitle: "Concerto no. 3 in Eb Major",
     composer: "W.A. Mozart",
@@ -100,7 +117,9 @@ export class SoloCardsComponent {
     divId: 8,
     description: this.descriptions.text[8],
     personalNote: this.descriptions.personal[8],
-    songLength: this.descriptions.length[8]
+    songLength: this.descriptions.length[8],
+    class: "mozart3",
+    flip: false
   },{
     songTitle: "Concerto no. 4 in Eb Major",
     composer: "W.A. Mozart",
@@ -110,7 +129,9 @@ export class SoloCardsComponent {
     divId: 9,
     description: this.descriptions.text[9],
     personalNote: this.descriptions.personal[9],
-    songLength: this.descriptions.length[9]
+    songLength: this.descriptions.length[9],
+    class: "mozart4",
+    flip: false
   },{
     songTitle: "Horn Quintet: Rondo",
     composer: "W.A. Mozart",
@@ -120,7 +141,9 @@ export class SoloCardsComponent {
     divId: 10,
     description: this.descriptions.text[10],
     personalNote: this.descriptions.personal[10],
-    songLength: this.descriptions.length[10]
+    songLength: this.descriptions.length[10],
+    class: "mozart5",
+    flip: false
   },{
     songTitle: "Horn-lokk",
     composer: "Sigurd Berge",
@@ -130,7 +153,9 @@ export class SoloCardsComponent {
     divId: 11,
     description: this.descriptions.text[11],
     personalNote: this.descriptions.personal[11],
-    songLength: this.descriptions.length[11]
+    songLength: this.descriptions.length[11],
+    class: "hornlokk",
+    flip: false
   },{
     songTitle: "Intrada for Solo Horn",
     composer: "Otto Ketting",
@@ -140,7 +165,9 @@ export class SoloCardsComponent {
     divId: 12,
     description: this.descriptions.text[12],
     personalNote: this.descriptions.personal[12],
-    songLength: this.descriptions.length[12]
+    songLength: this.descriptions.length[12],
+    class: "intrada",
+    flip: false
   },{
     songTitle: "Morceau de Concert",
     composer: "Camille Saint-Saens",
@@ -150,7 +177,9 @@ export class SoloCardsComponent {
     divId: 13,
     description: this.descriptions.text[13],
     personalNote: this.descriptions.personal[13],
-    songLength: this.descriptions.length[13]
+    songLength: this.descriptions.length[13],
+    class: "saintsaens",
+    flip: false
   },{
     songTitle: "Parable VIII for Solo Horn",
     composer: "Vincent Persichetti",
@@ -160,7 +189,9 @@ export class SoloCardsComponent {
     divId: 14,
     description: this.descriptions.text[14],
     personalNote: this.descriptions.personal[14],
-    songLength: this.descriptions.length[14]
+    songLength: this.descriptions.length[14],
+    class: "parable",
+    flip: false
   },{
     songTitle: "Suite in F Major for Two Horns",
     composer: "Georg Philipp Telemann",
@@ -170,7 +201,9 @@ export class SoloCardsComponent {
     divId: 15,
     description: this.descriptions.text[15],
     personalNote: this.descriptions.personal[15],
-    songLength: this.descriptions.length[15]
+    songLength: this.descriptions.length[15],
+    class: "telemann",
+    flip: false
   },{
     songTitle: "Villanelle",
     composer: "Paul Dukas",
@@ -180,7 +213,9 @@ export class SoloCardsComponent {
     divId: 16,
     description: this.descriptions.text[16],
     personalNote: this.descriptions.personal[16],
-    songLength: this.descriptions.length[16]
+    songLength: this.descriptions.length[16],
+    class: "villanelle",
+    flip: false
   }];
 
   time = new Observable<Date>((observer: Observer<Date>) => {
@@ -188,24 +223,20 @@ export class SoloCardsComponent {
     setInterval(() => observer.next(new Date()), 10000);
   });
 
-  show = false;
+  flip = false;
   divIdInt = -1;
 
-  expand(int: number) {
-    if (int != null || int > 16) {
-    document.getElementById(this.hornSolos[int].divId.toString())!.style.display = "block";
+  flipCard(int: number) {
+    if (!this.flip) {
+      this.flip = true;
+      this.divIdInt = int;
     }
     else {
-      throw console.error();
-    }
-  }
-
-  minimize(int: number) {
-    if (int != null || int > 16) {
-      document.getElementById(this.hornSolos[int].divId.toString())!.style.display = "none";
-    }
-    else {
-      throw console.error();
+      if (this.divIdInt == int) {
+        this.flip = false;
+        this.divIdInt = -1;
+      }
+      else { this.divIdInt = int }
     }
   }
 
@@ -218,11 +249,13 @@ export class SoloCardsComponent {
     }
   }
 
-  configUrl = './assets/config.json'
-
-  getTextFile(fileName: string) {
-    console.log(this.http.get(fileName, {responseType: 'text'}));
-    return this.http.get(fileName, {responseType: 'text'});
+  toggle(int: number) {
+    for (let i = 0; i < this.hornSolos.length; i++) {
+      if (int == this.hornSolos[i].divId) {
+        this.hornSolos[i].flip = !this.hornSolos[i].flip;
+        break;
+      }
+    }
   }
 
   constructor(private http: HttpClient,

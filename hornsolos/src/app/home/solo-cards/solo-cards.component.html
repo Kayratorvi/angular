@@ -1,22 +1,24 @@
 <div class="cards" *ngFor="let solo of hornSolos">
-    <div class="column">
-        <div class="card">
-            <a href="{{solo.pdf}}"><img src ="{{solo.png}}" aria-label="PDF of Music"></a>
-            <div class="container">
-                <div class="songTitle">{{solo.songTitle}}</div>
-                <div class="cardText">By {{solo.composer}}<br><a href="{{solo.recording}}">Favorite Recording</a></div>
-                <br><button type="button" (click)="expand(solo.divId)">expand</button>
-                <div class="timestamp"><br>Last updated:<br>{{ time | async | date: 'long'}}</div>
+    <div class="{{solo.class}}">
+        <div *ngIf="flip && divIdCheck(solo.divId); then thenBlock else elseBlock"></div>
+        <ng-template #elseBlock>
+            <div class="card" (click)="flipCard(solo.divId)">
+                <img src ="{{solo.png}}" aria-label="PDF of Music">
+                <div class="container">
+                    <div class="songTitle">{{solo.songTitle}}</div>
+                    <div class="cardText">By {{solo.composer}}</div>                    
+                </div>
             </div>
-        </div>
-    </div>
-
-    <div class="overlay" id="{{solo.divId}}">
-        <div class="overlayCard">
-            <div class="overlayText">{{solo.description}}<br><br>
-                {{solo.personalNote}}<br><br>Total play time: About {{solo.songLength}} minutes.  
+        </ng-template>
+        <ng-template #thenBlock>
+            <div class="overlayCard">
+                <div class="overlayText"><button class="back" (click)="flipCard(solo.divId)">back>></button><br><br>{{solo.description}}<br><br>
+                    {{solo.personalNote}}<br><br>Total play time: About {{solo.songLength}} minutes.
+                    <br><br><a href="{{solo.recording}}">Favorite YouTube Recording</a><br><br>
+                    <a href="{{solo.pdf}}">Link to password protected PDF file</a>
+                    <div class="timestamp"><br>Last updated:<br>{{ time | async | date: 'long'}}</div>
+                </div>
             </div>
-            <br><br><button type="button" class="close" (click)="minimize(solo.divId)">close</button><br>
-        </div>
+        </ng-template>
     </div>
 </div>

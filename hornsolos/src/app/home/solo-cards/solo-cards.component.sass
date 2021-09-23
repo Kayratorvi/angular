@@ -3,11 +3,21 @@ $card-font-size: 10pt
 $box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2)
 $hover-shadow: 0 8px 16px 0 rgba(0,0,0,0.6)
 $card-background: white
+$card-border: 1px solid grey
 $update-color: blue
-$default-column-width: 19.43%
+$line-height: 2.0
+$inner-text-padding: 2px 10px
+
+$column-width: 19.39%
+$column-height: 545px
+$float: left
+$column-padding: 20px 10px 0 0
+$margin-bottom: 15px
+$column-position: relative
+$left: auto
 
 img
-    float: left
+    float: $left
     width: 100%
     height: auto
     object-fit: contain
@@ -16,11 +26,11 @@ img
     font-family: $font-family
     font-weight: bold
     font-size: $card-font-size
-    line-height: 2.0
+    line-height: $line-height
 
 .cardText
     font-family: $font-family
-    line-height: 2.0
+    line-height: $line-height
     font-size: $card-font-size
 
 .card
@@ -28,8 +38,7 @@ img
     transition: 0.3s
     width: 100%
     background-color: $card-background
-    border: 1px solid grey
-    border-radius: 2 px
+    border: $card-border
 
 .card:hover
     box-shadow: $hover-shadow
@@ -40,58 +49,410 @@ img
     color: $update-color
 
 .container
-    padding: 2px 10px
-
-.column
-    float: left
-    width: $default-column-width
-    padding: 20px 10px 0 0
-    margin-bottom: 15px
-    position: relative
-    left: auto
-    height: 630px
-
-.overlay 
-    float: left
-    width: $default-column-width
-    padding: 20px 10px 0 0
-    position: relative
-    left: auto
-    height: 630px
-    margin-bottom: 15px
-    display: none
+    padding: $inner-text-padding
 
 .overlayCard
-    background-color: beige
-    border: 1px solid grey
-    border-radius: 2 px
+    background-color: $card-background
+    border: $card-border
+    border-radius: 10px
 
 .overlayText
     font-family: $font-family
     line-height: 1.5
     font-size: 9pt
-    padding: 2px 10px
-
-.close
-    float: right
+    padding: $inner-text-padding
 
 .cards
     position: relative
 
-@media screen and (max-width: 1800px)
-    .column
-        width: 24.28%
+.back
+    border: none
+    background-color: white
+    color: blue
+    font-size: 8pt
+    text-align: center
+    display: inline-block
+    transition: 0.3s
+
+.back:hover 
+    background-color: lightgrey
+
+button
+    float: right
+
+.beethoven
+    float: $float
+    width: $column-width
+    padding: $column-padding
+    margin-bottom: $margin-bottom
+    position: $column-position
+    left: $left
+    height: $column-height
+
+.jacob
+    float: $float
+    width: $column-width
+    padding: $column-padding
+    margin-bottom: $margin-bottom
+    position: $column-position
+    left: $left
+    height: $column-height
+
+.franz
+    float: $float
+    width: $column-width
+    padding: $column-padding
+    margin-bottom: $margin-bottom
+    position: $column-position
+    left: $left
+    height: $column-height
+
+.richard1
+    float: $float
+    width: $column-width
+    padding: $column-padding
+    margin-bottom: $margin-bottom
+    position: $column-position
+    left: $left
+    height: $column-height
+
+.richard2
+    float: $float
+    width: $column-width
+    padding: $column-padding
+    margin-bottom: $margin-bottom
+    position: $column-position
+    left: $left
+    height: $column-height
+
+.hindemith
+    float: $float
+    width: $column-width
+    padding: $column-padding
+    margin-bottom: $margin-bottom
+    position: $column-position
+    left: $left
+    height: $column-height
+
+.mozart1
+    float: $float
+    width: $column-width
+    padding: $column-padding
+    margin-bottom: $margin-bottom
+    position: $column-position
+    left: $left
+    height: $column-height
+
+.mozart2
+    float: $float
+    width: $column-width
+    padding: $column-padding
+    margin-bottom: $margin-bottom
+    position: $column-position
+    left: $left
+    height: $column-height
+
+.mozart3
+    float: $float
+    width: $column-width
+    padding: $column-padding
+    margin-bottom: $margin-bottom
+    position: $column-position
+    left: $left
+    height: $column-height
+
+.mozart4
+    float: $float
+    width: $column-width
+    padding: $column-padding
+    margin-bottom: $margin-bottom
+    position: $column-position
+    left: $left
+    height: $column-height
+
+.mozart5
+    float: $float
+    width: $column-width
+    padding: $column-padding
+    margin-bottom: $margin-bottom
+    position: $column-position
+    left: $left
+    height: $column-height
+
+.hornlokk
+    float: $float
+    width: $column-width
+    padding: $column-padding
+    margin-bottom: $margin-bottom
+    position: $column-position
+    left: $left
+    height: $column-height
+
+.intrada
+    float: $float
+    width: $column-width
+    padding: $column-padding
+    margin-bottom: $margin-bottom
+    position: $column-position
+    left: $left
+    height: $column-height
+
+.saintsaens
+    float: $float
+    width: $column-width
+    padding: $column-padding
+    margin-bottom: $margin-bottom
+    position: $column-position
+    left: $left
+    height: $column-height
+
+.parable
+    float: $float
+    width: $column-width
+    padding: $column-padding
+    margin-bottom: $margin-bottom
+    position: $column-position
+    left: $left
+    height: $column-height
+
+.telemann
+    float: $float
+    width: $column-width
+    padding: $column-padding
+    margin-bottom: $margin-bottom
+    position: $column-position
+    left: $left
+    height: $column-height
+
+.villanelle
+    float: $float
+    width: $column-width
+    padding: $column-padding
+    margin-bottom: $margin-bottom
+    position: $column-position
+    left: $left
+    height: $column-height
+
+@media screen and (max-width: 1700px)
+    $column-width: 24.28% 
+    $column-height: 565px 
+    .beethoven
+        height: $column-height
+        width: $column-width
+    .jacob
+        height: $column-height
+        width: $column-width
+    .franz
+        height: $column-height
+        width: $column-width
+    .richard1
+        height: $column-height
+        width: $column-width
+    .richard2
+        height: $column-height
+        width: $column-width
+    .hindemith
+        height: $column-height
+        width: $column-width
+    .mozart1
+        height: $column-height
+        width: $column-width
+    .mozart2
+        height: $column-height
+        width: $column-width
+    .mozart3
+        height: $column-height
+        width: $column-width
+    .mozart4
+        height: $column-height
+        width: $column-width
+    .mozart5
+        height: $column-height
+        width: $column-width
+    .hornlokk
+        height: $column-height
+        width: $column-width
+    .intrada
+        height: $column-height
+        width: $column-width
+    .saintsaens
+        height: $column-height
+        width: $column-width
+    .parable
+        height: $column-height
+        width: $column-width
+    .telemann
+        height: $column-height
+        width: $column-width
+    .villanelle
+        height: $column-height
+        width: $column-width
 
 @media screen and (max-width: 1440px)
-    .column
-        width: 32.3%
+    $column-width: 32.3% 
+    $column-height: 625px 
+    .beethoven
+        height: $column-height
+        width: $column-width
+    .jacob
+        height: $column-height
+        width: $column-width
+    .franz
+        height: $column-height
+        width: $column-width
+    .richard1
+        height: $column-height
+        width: $column-width
+    .richard2
+        height: $column-height
+        width: $column-width
+    .hindemith
+        height: $column-height
+        width: $column-width
+    .mozart1
+        height: $column-height
+        width: $column-width
+    .mozart2
+        height: $column-height
+        width: $column-width
+    .mozart3
+        height: $column-height
+        width: $column-width
+    .mozart4
+        height: $column-height
+        width: $column-width
+    .mozart5
+        height: $column-height
+        width: $column-width
+    .hornlokk
+        height: $column-height
+        width: $column-width
+    .intrada
+        height: $column-height
+        width: $column-width
+    .saintsaens
+        height: $column-height
+        width: $column-width
+    .parable
+        height: $column-height
+        width: $column-width
+    .telemann
+        height: $column-height
+        width: $column-width
+    .villanelle
+        height: $column-height
+        width: $column-width
 
-@media screen and (max-width: 1080px)
+@media screen and (max-width: 1200px)
+    $column-width: 48.5% 
+    $column-height: auto 
     .column
-        width: 48.5%
+        height: $column-height
+        width: $column-width
+    .beethoven
+        height: $column-height
+        width: $column-width
+    .jacob
+        height: $column-height
+        width: $column-width
+    .franz
+        height: $column-height
+        width: $column-width
+    .richard1
+        height: $column-height
+        width: $column-width
+    .richard2
+        height: $column-height
+        width: $column-width
+    .hindemith
+        height: $column-height
+        width: $column-width
+    .mozart1
+        height: $column-height
+        width: $column-width
+    .mozart2
+        height: $column-height
+        width: $column-width
+    .mozart3
+        height: $column-height
+        width: $column-width
+    .mozart4
+        height: $column-height
+        width: $column-width
+    .mozart5
+        height: $column-height
+        width: $column-width
+    .hornlokk
+        height: $column-height
+        width: $column-width
+    .intrada
+        height: $column-height
+        width: $column-width
+    .saintsaens
+        height: $column-height
+        width: $column-width
+    .parable
+        height: $column-height
+        width: $column-width
+    .telemann
+        height: $column-height
+        width: $column-width
+    .villanelle
+        height: $column-height
+        width: $column-width
 
 @media screen and (max-width: 720px)
-    .column
-        width: 100%
-    .center
-        font-size: 30pt
+    $column-width: 100% 
+    $column-height: auto 
+    .beethoven
+        height: $column-height
+        width: $column-width
+    .jacob
+        height: $column-height
+        width: $column-width
+    .franz
+        height: $column-height
+        width: $column-width
+    .richard1
+        height: $column-height
+        width: $column-width
+    .richard2
+        height: $column-height
+        width: $column-width
+    .hindemith
+        height: $column-height
+        width: $column-width
+    .mozart1
+        height: $column-height
+        width: $column-width
+    .mozart2
+        height: $column-height
+        width: $column-width
+    .mozart3
+        height: $column-height
+        width: $column-width
+    .mozart4
+        height: $column-height
+        width: $column-width
+    .mozart5
+        height: $column-height
+        width: $column-width
+    .hornlokk
+        height: $column-height
+        width: $column-width
+    .intrada
+        height: $column-height
+        width: $column-width
+    .saintsaens
+        height: $column-height
+        width: $column-width
+    .parable
+        height: $column-height
+        width: $column-width
+    .telemann
+        height: $column-height
+        width: $column-width
+    .villanelle
+        height: $column-height
+        width: $column-width
+
