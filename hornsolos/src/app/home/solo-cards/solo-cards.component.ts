@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { Observable, Observer } from 'rxjs';
 
 import { TextDescriptionsComponent } from 'src/app/home/solo-cards/text-descriptions/text-descriptions.component'
-import { SearchBarComponent } from '../search-bar/search-bar.component';
 
 import {
   trigger,
@@ -267,7 +266,6 @@ export class SoloCardsComponent {
     setTimeout(this.flipCard, 250, int, this.hornSolos);
   }
 
-  constructor(private descriptions: TextDescriptionsComponent,
-    private searchBar: SearchBarComponent) { }
+  constructor(private descriptions: TextDescriptionsComponent) { }
 
 }
