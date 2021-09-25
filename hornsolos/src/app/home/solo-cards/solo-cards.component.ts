@@ -1,14 +1,32 @@
 import { Component } from '@angular/core';
 import { Observable, Observer } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
 
 import { TextDescriptionsComponent } from 'src/app/home/solo-cards/text-descriptions/text-descriptions.component'
+import { SearchBarComponent } from '../search-bar/search-bar.component';
+
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition,
+} from '@angular/animations'
 
 @Component({
   selector: 'app-solo-cards',
   templateUrl: './solo-cards.component.html',
   styleUrls: ['./solo-cards.component.sass'],
-  //animations: ['./solo-cards.component.animations.sass']
+  animations: [
+    trigger('cardAnimation', [
+      state('front', style({
+        transform: 'rotateY(180deg)'
+      })),
+      state('back', style({})),
+      transition('front <=> back', [
+        animate('0.5s')
+      ]),
+    ]),
+  ],
 })
 export class SoloCardsComponent {
 
@@ -23,7 +41,8 @@ export class SoloCardsComponent {
     personalNote: this.descriptions.personal[0],
     songLength: this.descriptions.length[0],
     class: "beethoven",
-    flip: false
+    flip: false,
+    animation: false
   },{
     songTitle: "Concerto for Horn and Strings",
     composer: "Gordon Jacob",
@@ -35,7 +54,8 @@ export class SoloCardsComponent {
     personalNote: this.descriptions.personal[1],
     songLength: this.descriptions.length[1],
     class: "jacob",
-    flip: false
+    flip: false,
+    animation: false
   },{
     songTitle: "Concerto Op. 8",
     composer: "Franz Strauss",
@@ -47,7 +67,8 @@ export class SoloCardsComponent {
     personalNote: this.descriptions.personal[2],
     songLength: this.descriptions.length[2],
     class: "franz",
-    flip: false
+    flip: false,
+    animation: false
   },{
     songTitle: "Concerto no. 1 in Eb Major",
     composer: "Richard Strauss",
@@ -59,7 +80,8 @@ export class SoloCardsComponent {
     personalNote: this.descriptions.personal[3],
     songLength: this.descriptions.length[3],
     class: "richard1",
-    flip: false
+    flip: false,
+    animation: false
   },{
     songTitle: "Concerto no. 2 in Eb Major",
     composer: "Richard Strauss",
@@ -71,7 +93,8 @@ export class SoloCardsComponent {
     personalNote: this.descriptions.personal[4],
     songLength: this.descriptions.length[4],
     class: "richard2",
-    flip: false
+    flip: false,
+    animation: false
   },{
     songTitle: "Sonata for Horn and Piano",
     composer: "Paul Hindemith",
@@ -83,7 +106,8 @@ export class SoloCardsComponent {
     personalNote: this.descriptions.personal[5],
     songLength: this.descriptions.length[5],
     class: "hindemith",
-    flip: false
+    flip: false,
+    animation: false
   },{
     songTitle: "Concerto no. 1 in D Major",
     composer: "W.A. Mozart",
@@ -95,7 +119,8 @@ export class SoloCardsComponent {
     personalNote: this.descriptions.personal[6],
     songLength: this.descriptions.length[6],
     class: "mozart1",
-    flip: false
+    flip: false,
+    animation: false
   },{
     songTitle: "Concerto no. 2 in Eb Major",
     composer: "W.A. Mozart",
@@ -107,7 +132,8 @@ export class SoloCardsComponent {
     personalNote: this.descriptions.personal[7],
     songLength: this.descriptions.length[7],
     class: "mozart2",
-    flip: false
+    flip: false,
+    animation: false
   },{
     songTitle: "Concerto no. 3 in Eb Major",
     composer: "W.A. Mozart",
@@ -119,7 +145,8 @@ export class SoloCardsComponent {
     personalNote: this.descriptions.personal[8],
     songLength: this.descriptions.length[8],
     class: "mozart3",
-    flip: false
+    flip: false,
+    animation: false
   },{
     songTitle: "Concerto no. 4 in Eb Major",
     composer: "W.A. Mozart",
@@ -131,7 +158,8 @@ export class SoloCardsComponent {
     personalNote: this.descriptions.personal[9],
     songLength: this.descriptions.length[9],
     class: "mozart4",
-    flip: false
+    flip: false,
+    animation: false
   },{
     songTitle: "Horn Quintet: Rondo",
     composer: "W.A. Mozart",
@@ -143,7 +171,8 @@ export class SoloCardsComponent {
     personalNote: this.descriptions.personal[10],
     songLength: this.descriptions.length[10],
     class: "mozart5",
-    flip: false
+    flip: false,
+    animation: false
   },{
     songTitle: "Horn-lokk",
     composer: "Sigurd Berge",
@@ -155,7 +184,8 @@ export class SoloCardsComponent {
     personalNote: this.descriptions.personal[11],
     songLength: this.descriptions.length[11],
     class: "hornlokk",
-    flip: false
+    flip: false,
+    animation: false
   },{
     songTitle: "Intrada for Solo Horn",
     composer: "Otto Ketting",
@@ -167,7 +197,8 @@ export class SoloCardsComponent {
     personalNote: this.descriptions.personal[12],
     songLength: this.descriptions.length[12],
     class: "intrada",
-    flip: false
+    flip: false,
+    animation: false
   },{
     songTitle: "Morceau de Concert",
     composer: "Camille Saint-Saens",
@@ -179,7 +210,8 @@ export class SoloCardsComponent {
     personalNote: this.descriptions.personal[13],
     songLength: this.descriptions.length[13],
     class: "saintsaens",
-    flip: false
+    flip: false,
+    animation: false
   },{
     songTitle: "Parable VIII for Solo Horn",
     composer: "Vincent Persichetti",
@@ -191,7 +223,8 @@ export class SoloCardsComponent {
     personalNote: this.descriptions.personal[14],
     songLength: this.descriptions.length[14],
     class: "parable",
-    flip: false
+    flip: false,
+    animation: false
   },{
     songTitle: "Suite in F Major for Two Horns",
     composer: "Georg Philipp Telemann",
@@ -203,7 +236,8 @@ export class SoloCardsComponent {
     personalNote: this.descriptions.personal[15],
     songLength: this.descriptions.length[15],
     class: "telemann",
-    flip: false
+    flip: false,
+    animation: false
   },{
     songTitle: "Villanelle",
     composer: "Paul Dukas",
@@ -215,7 +249,8 @@ export class SoloCardsComponent {
     personalNote: this.descriptions.personal[16],
     songLength: this.descriptions.length[16],
     class: "villanelle",
-    flip: false
+    flip: false,
+    animation: false
   }];
 
   time = new Observable<Date>((observer: Observer<Date>) => {
@@ -223,42 +258,16 @@ export class SoloCardsComponent {
     setInterval(() => observer.next(new Date()), 10000);
   });
 
-  flip = false;
-  divIdInt = -1;
-
-  flipCard(int: number) {
-    if (!this.flip) {
-      this.flip = true;
-      this.divIdInt = int;
-    }
-    else {
-      if (this.divIdInt == int) {
-        this.flip = false;
-        this.divIdInt = -1;
-      }
-      else { this.divIdInt = int }
-    }
-  }
-
-  divIdCheck(int: number) {
-    if (this.divIdInt == int) {
-      return true;
-    }
-    else {
-      return false;
-    }
+  flipCard(int: number, solo: any) {
+    solo[int].flip = !solo[int].flip
   }
 
   toggle(int: number) {
-    for (let i = 0; i < this.hornSolos.length; i++) {
-      if (int == this.hornSolos[i].divId) {
-        this.hornSolos[i].flip = !this.hornSolos[i].flip;
-        break;
-      }
-    }
+    this.hornSolos[int].animation = !this.hornSolos[int].animation;
+    setTimeout(this.flipCard, 250, int, this.hornSolos);
   }
 
-  constructor(private http: HttpClient,
-    private descriptions: TextDescriptionsComponent) { }
+  constructor(private descriptions: TextDescriptionsComponent,
+    private searchBar: SearchBarComponent) { }
 
 }

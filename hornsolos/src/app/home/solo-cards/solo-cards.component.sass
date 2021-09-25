@@ -8,10 +8,10 @@ $update-color: blue
 $line-height: 2.0
 $inner-text-padding: 2px 10px
 
-$column-width: 19.39%
-$column-height: 545px
+$column-width: 428px
+$column-height: 636px
 $float: left
-$column-padding: 20px 10px 0 0
+$column-padding: 10px 5px 10px 5px
 $margin-bottom: 15px
 $column-position: relative
 $left: auto
@@ -39,6 +39,8 @@ img
     width: 100%
     background-color: $card-background
     border: $card-border
+    transform: rotateY(180deg)
+    height: $column-height
 
 .card:hover
     box-shadow: $hover-shadow
@@ -47,6 +49,10 @@ img
     font-family: $font-family
     font-size: 8pt
     color: $update-color
+    bottom: 10px
+    position: absolute
+    line-height: 1.5
+    padding: $inner-text-padding
 
 .container
     padding: $inner-text-padding
@@ -54,7 +60,7 @@ img
 .overlayCard
     background-color: $card-background
     border: $card-border
-    border-radius: 10px
+    height: $column-height
 
 .overlayText
     font-family: $font-family
@@ -232,227 +238,4 @@ button
     position: $column-position
     left: $left
     height: $column-height
-
-@media screen and (max-width: 1700px)
-    $column-width: 24.28% 
-    $column-height: 565px 
-    .beethoven
-        height: $column-height
-        width: $column-width
-    .jacob
-        height: $column-height
-        width: $column-width
-    .franz
-        height: $column-height
-        width: $column-width
-    .richard1
-        height: $column-height
-        width: $column-width
-    .richard2
-        height: $column-height
-        width: $column-width
-    .hindemith
-        height: $column-height
-        width: $column-width
-    .mozart1
-        height: $column-height
-        width: $column-width
-    .mozart2
-        height: $column-height
-        width: $column-width
-    .mozart3
-        height: $column-height
-        width: $column-width
-    .mozart4
-        height: $column-height
-        width: $column-width
-    .mozart5
-        height: $column-height
-        width: $column-width
-    .hornlokk
-        height: $column-height
-        width: $column-width
-    .intrada
-        height: $column-height
-        width: $column-width
-    .saintsaens
-        height: $column-height
-        width: $column-width
-    .parable
-        height: $column-height
-        width: $column-width
-    .telemann
-        height: $column-height
-        width: $column-width
-    .villanelle
-        height: $column-height
-        width: $column-width
-
-@media screen and (max-width: 1440px)
-    $column-width: 32.3% 
-    $column-height: 625px 
-    .beethoven
-        height: $column-height
-        width: $column-width
-    .jacob
-        height: $column-height
-        width: $column-width
-    .franz
-        height: $column-height
-        width: $column-width
-    .richard1
-        height: $column-height
-        width: $column-width
-    .richard2
-        height: $column-height
-        width: $column-width
-    .hindemith
-        height: $column-height
-        width: $column-width
-    .mozart1
-        height: $column-height
-        width: $column-width
-    .mozart2
-        height: $column-height
-        width: $column-width
-    .mozart3
-        height: $column-height
-        width: $column-width
-    .mozart4
-        height: $column-height
-        width: $column-width
-    .mozart5
-        height: $column-height
-        width: $column-width
-    .hornlokk
-        height: $column-height
-        width: $column-width
-    .intrada
-        height: $column-height
-        width: $column-width
-    .saintsaens
-        height: $column-height
-        width: $column-width
-    .parable
-        height: $column-height
-        width: $column-width
-    .telemann
-        height: $column-height
-        width: $column-width
-    .villanelle
-        height: $column-height
-        width: $column-width
-
-@media screen and (max-width: 1200px)
-    $column-width: 48.5% 
-    $column-height: auto 
-    .column
-        height: $column-height
-        width: $column-width
-    .beethoven
-        height: $column-height
-        width: $column-width
-    .jacob
-        height: $column-height
-        width: $column-width
-    .franz
-        height: $column-height
-        width: $column-width
-    .richard1
-        height: $column-height
-        width: $column-width
-    .richard2
-        height: $column-height
-        width: $column-width
-    .hindemith
-        height: $column-height
-        width: $column-width
-    .mozart1
-        height: $column-height
-        width: $column-width
-    .mozart2
-        height: $column-height
-        width: $column-width
-    .mozart3
-        height: $column-height
-        width: $column-width
-    .mozart4
-        height: $column-height
-        width: $column-width
-    .mozart5
-        height: $column-height
-        width: $column-width
-    .hornlokk
-        height: $column-height
-        width: $column-width
-    .intrada
-        height: $column-height
-        width: $column-width
-    .saintsaens
-        height: $column-height
-        width: $column-width
-    .parable
-        height: $column-height
-        width: $column-width
-    .telemann
-        height: $column-height
-        width: $column-width
-    .villanelle
-        height: $column-height
-        width: $column-width
-
-@media screen and (max-width: 720px)
-    $column-width: 100% 
-    $column-height: auto 
-    .beethoven
-        height: $column-height
-        width: $column-width
-    .jacob
-        height: $column-height
-        width: $column-width
-    .franz
-        height: $column-height
-        width: $column-width
-    .richard1
-        height: $column-height
-        width: $column-width
-    .richard2
-        height: $column-height
-        width: $column-width
-    .hindemith
-        height: $column-height
-        width: $column-width
-    .mozart1
-        height: $column-height
-        width: $column-width
-    .mozart2
-        height: $column-height
-        width: $column-width
-    .mozart3
-        height: $column-height
-        width: $column-width
-    .mozart4
-        height: $column-height
-        width: $column-width
-    .mozart5
-        height: $column-height
-        width: $column-width
-    .hornlokk
-        height: $column-height
-        width: $column-width
-    .intrada
-        height: $column-height
-        width: $column-width
-    .saintsaens
-        height: $column-height
-        width: $column-width
-    .parable
-        height: $column-height
-        width: $column-width
-    .telemann
-        height: $column-height
-        width: $column-width
-    .villanelle
-        height: $column-height
-        width: $column-width
 
