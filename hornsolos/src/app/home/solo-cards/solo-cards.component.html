@@ -1,24 +1,27 @@
-<br><div class="cards" *ngFor="let solo of hornSolos">
-    <div [@cardAnimation]="solo.animation ? 'back' : 'front'" class="{{solo.class}}">
-        <div *ngIf="solo.flip; then thenBlock else elseBlock"></div>
-        <ng-template #elseBlock>
-            <div class="card" (click)="toggle(solo.divId)">
-                <img src ="{{solo.png}}" aria-label="PDF of Music">
-                <div class="container">
-                    <div class="songTitle">{{solo.songTitle}}</div>
-                    <div class="cardText">By {{solo.composer}}</div>                    
+<input type="text" id="query" placeholder="Search.." #input (keyup)="onKey(input.value)">
+<br><br><div class="cards" *ngFor="let solo of hornSolos">
+    <ng-template [ngIf]="solo.search">
+        <div [@cardAnimation]="solo.animation ? 'back' : 'front'" class="{{solo.class}}">
+            <div *ngIf="solo.flip; then thenBlock else elseBlock"></div>
+            <ng-template #elseBlock>
+                <div class="card" (click)="toggle(solo.divId)">
+                    <img src ="{{solo.png}}" aria-label="PDF of Music">
+                    <div class="container">
+                        <div class="songTitle">{{solo.songTitle}}</div>
+                        <div class="cardText">By {{solo.composer}}</div>                    
+                    </div>
                 </div>
-            </div>
-        </ng-template>
-        <ng-template #thenBlock>
-            <div class="overlayCard">
-                <div class="overlayText"><button class="back" (click)="toggle(solo.divId)">back>></button><br><br>{{solo.description}}<br><br>
-                    {{solo.personalNote}}<br><br>Total play time: About {{solo.songLength}} minutes.
-                    <br><br><a href="{{solo.recording}}">Favorite YouTube Recording</a><br><br>
-                    <a href="{{solo.pdf}}">Link to password protected PDF file</a>
+            </ng-template>
+            <ng-template #thenBlock>
+                <div class="overlayCard">
+                    <div class="overlayText"><button class="back" (click)="toggle(solo.divId)">back>></button><br><br>{{solo.description}}<br><br>
+                        {{solo.personalNote}}<br><br>Total play time: About {{solo.songLength}} minutes.
+                        <br><br><a href="{{solo.recording}}">Favorite YouTube Recording</a><br><br>
+                        <a href="{{solo.pdf}}">Link to password protected PDF file</a>
+                    </div>
+                    <div class="timestamp"><br>Last updated:<br>{{ time | async | date: 'long'}}</div>
                 </div>
-                <div class="timestamp"><br>Last updated:<br>{{ time | async | date: 'long'}}</div>
-            </div>
-        </ng-template>
-    </div>
+            </ng-template>
+        </div>
+    </ng-template>
 </div>

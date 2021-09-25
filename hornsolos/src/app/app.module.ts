@@ -7,7 +7,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { SoloCardsComponent } from './home/solo-cards/solo-cards.component';
-import { SearchBarComponent } from './home/search-bar/search-bar.component';
 import { TextDescriptionsComponent } from './home/solo-cards/text-descriptions/text-descriptions.component';
 
 @NgModule({
@@ -15,7 +14,6 @@ import { TextDescriptionsComponent } from './home/solo-cards/text-descriptions/t
     AppComponent,
     HomeComponent,
     SoloCardsComponent,
-    SearchBarComponent,
     TextDescriptionsComponent
   ],
   imports: [
