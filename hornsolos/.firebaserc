@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "hornsolocards": {
+      "hosting": {
+        "hornsolos": [
+          "hornsolocards"
+        ]
+      }
+    }
+  }
+}
