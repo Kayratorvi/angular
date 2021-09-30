@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCardModule } from '@angular/material/card'
+import { MatGridListModule } from '@angular/material/grid-list'
+import { MatToolbarModule } from '@angular/material/toolbar'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,7 +23,10 @@ import { TextDescriptionsComponent } from './home/solo-cards/text-descriptions/t
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatCardModule,
+    MatGridListModule,
+    MatToolbarModule
   ],
   providers: [TextDescriptionsComponent],
   bootstrap: [AppComponent]

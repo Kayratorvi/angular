@@ -1,27 +1,27 @@
-<input type="text" id="query" placeholder="Search.." #input (keyup)="onKey(input.value)">
-<br><br><div class="cards" *ngFor="let solo of hornSolos">
-    <ng-template [ngIf]="solo.search">
-        <div [@cardAnimation]="solo.animation ? 'back' : 'front'" class="{{solo.class}}">
-            <div *ngIf="solo.flip; then thenBlock else elseBlock"></div>
-            <ng-template #elseBlock>
-                <div class="card" (click)="toggle(solo.divId)">
-                    <img src ="{{solo.png}}" aria-label="PDF of Music">
-                    <div class="container">
-                        <div class="songTitle">{{solo.songTitle}}</div>
-                        <div class="cardText">By {{solo.composer}}</div>                    
-                    </div>
-                </div>
-            </ng-template>
-            <ng-template #thenBlock>
-                <div class="overlayCard">
-                    <div class="overlayText"><button class="back" (click)="toggle(solo.divId)">back>></button><br><br>{{solo.description}}<br><br>
-                        {{solo.personalNote}}<br><br>Total play time: About {{solo.songLength}} minutes.
-                        <br><br><a href="{{solo.recording}}">Favorite YouTube Recording</a><br><br>
-                        <a href="{{solo.pdf}}">Link to password protected PDF file</a>
-                    </div>
-                    <div class="timestamp"><br>Last updated:<br>{{ time | async | date: 'long'}}</div>
-                </div>
-            </ng-template>
-        </div>
-    </ng-template>
-</div>
+<input type="text" class="query" placeholder="Search..." #input (keyup)="onKey(input.value)">
+<br><br><mat-grid-list cols="{{numCols | async}}" gutterSize="15" rowHeight="3:4.48"> 
+    <div *ngFor="let solo of hornSolos">
+        <ng-template [ngIf]="solo.search">
+            <mat-grid-tile [@cardFlip]="solo.animation ? 'back' : 'front'" class="{{solo.class}}">
+                <div *ngIf="solo.flip; then thenBlock else elseBlock"></div>
+                <ng-template #elseBlock>
+                    <mat-card class="card" (click)="toggle(solo.divId)">
+                        <img mat-card-image src="{{solo.png}}" aria-label="PDF of Music">                   
+                        <mat-card-title class="songTitle">{{solo.songTitle}}</mat-card-title>
+                        <mat-card-subtitle class="cardText">By {{solo.composer}}</mat-card-subtitle>                   
+                    </mat-card>
+                </ng-template>
+                <ng-template #thenBlock>
+                    <mat-card class="overlayCard">
+                        <mat-card-content class="overlayText"><button class="back" (click)="toggle(solo.divId)">back>></button><br><br>{{solo.description}}<br><br>
+                            {{solo.personalNote}}<br><br>Total play time: About {{solo.songLength}} minutes.
+                            <br><br><a href="{{solo.recording}}">Favorite YouTube Recording</a><br><br>
+                            <a href="{{solo.pdf}}">Link to password protected PDF file</a><br><br><br><br>
+                        </mat-card-content>
+                        <div class="timestamp"><br>Last updated:<br>{{ time | async | date: 'long'}}</div>
+                    </mat-card>
+                </ng-template>
+            </mat-grid-tile>
+        </ng-template>
+    </div>
+</mat-grid-list>
