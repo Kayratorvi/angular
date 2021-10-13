@@ -15,8 +15,8 @@
                     <mat-card class="overlayCard">
                         <mat-card-content class="overlayText"><button class="back" (click)="toggle(solo.divId)">back>></button><br><br>{{solo.description}}<br><br>
                             {{solo.personalNote}}<br><br>Total play time: About {{solo.songLength}} minutes.
-                            <br><br><a href="{{solo.recording}}">Favorite YouTube Recording</a><br><br>
-                            <a href="{{solo.pdf}}">Link to password protected PDF file</a><br><br><br><br>
+                            <br><br><a href="{{solo.recording}}" target="_blank" rel="noopener noreferrer">Favorite YouTube Recording</a><br><br>
+                            <a href="{{solo.pdf}}" target="_blank" rel="noopener noreferrer">Link to password protected PDF file</a><br><br><br><br>
                         </mat-card-content>
                         <div class="timestamp"><br>Last updated:<br>{{ time | async | date: 'long'}}</div>
                     </mat-card>
