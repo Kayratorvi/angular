@@ -69,7 +69,7 @@ export class TextDescriptionsComponent {
     Interestingly, the piece is not meant to be transposed depending on which instrument is performing it, allowing for two separate interpretations of it with each being in different keys. 
     This piece has a very forlorn sound, with an excited fanfare in the middle. To me, it gives the idea of an abandoned kingdom, which at one time was glorious and triumphant, but suffered a mysterious downfall.`,
 
-    `This piece was written by <a href='https://en.wikipedia.org/wiki/Camille_Saint-Sa%C3%ABns'>Camille Saint-Saens</a>, a French composer who is well known for many of his other compositions. 
+    `This piece was written by Camille Saint-Saens, a French composer who is well known for many of his other compositions. 
     This piece, which has three movements with no stops in between, is a technically challenging piece for the horn soloist, demonstrating fast passages and extreme ranges of notes on the horn.
     The last movement in particular is exceptionally difficult, and is often left out by younger students of the piece.`,
 
