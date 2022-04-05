@@ -305,9 +305,9 @@ export class SoloCardsComponent {
     }
   }
 
-  largeScreen = window.matchMedia("(max-width: 1440px)");
-  mediumScreen = window.matchMedia("(max-width: 1200px");
-  smallScreen = window.matchMedia("(max-width: 700px");
+  largeScreen = window.matchMedia("(max-width: 1200px)");
+  mediumScreen = window.matchMedia("(max-width: 900px");
+  smallScreen = window.matchMedia("(max-width: 500px");
 
   numCols = new Observable<number>((observer) => {
     if (this.smallScreen.matches) {
